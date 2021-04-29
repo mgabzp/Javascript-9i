@@ -1,78 +1,48 @@
-// Variable
-//Es un espacio de memoria donde guardo datos
+// Redondear un numero mas bajo
+console.log (Math.floor (45.89));
 
-var nombre = 'Eugenio';
-let apellido="Perez";
-const pi=3.14;
+//redondear hacia arriba
+console.log (Math.round (45.52));
 
-// tipos de datos
+//Obtener el num maximo de una lista de numeros
 
-// string son textos
-let cliente='fabricio';
+console.log (`El número máximo es: ${Math.max (56,5,45,90,5,1000)}`);
 
-//number
-let number1=56;
-let number2=104;
-let number3=3.4;
+//Obtener el minimo
 
-//Boolean, sólo contienen falso o verdadero
-let comprar=true;
-let comer=false;
-
-//null o valor nulo/vacío
-let billetera=null;
-
-//undefined
-let caja;
-
-//Array o arreglos
-let arreglo=['Pablo', 689, true];
-
-//Object
-let persona={
-    nombre: "José",
-    apellido: "Mandarino",
-    edad:33,
-};
+console.log (`El número mínimo es: ${Math.min (56,5,45,90,5,1000)}`);
 
 
-//Operadores
-
-//Aritméticos
-
-let suma= number1 + number2;
-let resta= number1 - number2;
-let multiplicacion= number1 * number2;
-let division= number1/number2;
-let resto= number1 % number2;
-
-//Unitarios
-++number1;
---number2;
-
-//Relacionales
-console.log(number1 == number2);
-console.log(number1 >= number2);
-console.log(number1 <= number2);
-console.log(number1 != number2);
-
-console.log("Hola mundo");
-
-console.log("El resultado de la suma es " + suma);
-
-//Negación
-let verdadero=true;
-console.log(!verdadero);
-
-//PROMPT
-
-let valor= prompt('Ingrese su nombre');
-
-let hobbie= prompt('ingrese su hobbie');
+//Obtener el número entero
+let numero= 67.876533
+console.log (numero);
+numero =parseInt (numero);
+let decimal = "456.322345"
+console.log (parseFloat (decimal));
 
 
+//Elevar a la potencia
+let base= numero
+let exponente= 3
 
+console.log (`El numero ${base} elevado a la potencia ${exponente} es de ${Math.pow (base, exponente)} `)
 
+//Calcular raiz cuadrado
+console.log (Math.sqrt (64));
+
+//Numero aleatorio
+
+console.log (Math.round (Math.random ()* 100)); //math.round seria para redondear, math.random para que salga un n° aleatorio
+
+//Obtener numero con 2 decimales
+
+decimal= parseFloat (decimal)
+
+console.log (Math.round (decimal *100) /100);
+
+//ToFixed
+
+let decimalString = parseFloat 
 
 
 
