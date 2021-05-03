@@ -12,14 +12,14 @@ console.log (nombre.charAt(0).toUpperCase() + nombre.substr(1,nombre.length-1));
 
 //Tarea 2
 
-let numeroA= 10;
-let numeroB= 5;
-let numeroC= 30;
+let numero1= 10;
+let numero2= 5;
+let numero3= 30;
 
 
-console.log (`El número máximo es: ${Math.max (numeroA, numeroB, numeroC)}`);
+console.log (`El número máximo es: ${Math.max (numero1, numero2, numero3)}`);
 
-console.log (`El número mínimo es: ${Math.min (numeroA, numeroB, numeroC)}`);
+console.log (`El número mínimo es: ${Math.min (numero1, numero2, numero3)}`);
 
-console.log (Math.sqrt (numeroB));
+console.log (Math.sqrt (numero2));
 
