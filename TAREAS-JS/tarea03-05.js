@@ -1,8 +1,14 @@
 //Tarea 1- Capitalizar un nombre
 
-let nombre= "gabriela"
+let nombre= prompt ('Ingrese su nombre a capitalizar');
 
-console.log (nombre.toUpperCase ());
+console.log (nombre.length);
+console.log (nombre.charAt (0));
+console.log (nombre.substr(1,7));
+
+console.log (nombre.charAt(0).toUpperCase() + nombre.substr(1,nombre.length-1));
+
+
 
 //Tarea 2
 
