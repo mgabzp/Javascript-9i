@@ -50,6 +50,22 @@ switch (diaNumero){
 
 }
 
+//-----------------------------
+
+let num = 5
+
+switch (true) {
+    case num === 10:
+        console.log('El numero es igual a 10');
+        break;
+    case num % 2 === 0:
+        console.log('El numero es par');
+        break;
+    default:
+        console.log('No se que más hacer');
+        break;
+}
+
 //......................................................
 
 let comando=prompt ('Ingrese un comando (alerta, consola, print)');
