@@ -5,11 +5,11 @@ let alumnos = ['Pablo', 'Fabrizio', 'Laura', 'Gabriela']
 
 //cómo acceder a un elemento dentro del arreglo
 
-// alumnos = [2] //se pone la posición segun el lenght (comienza dsd 0 como los string)
+alumnos = [2] //se pone la posición segun el lenght (comienza dsd 0 como los string)
 
-// //obtener el ultimo elemento
+//obtener el ultimo elemento
 
-// alumnos = [alumnos.length - 1]
+alumnos = [alumnos.length - 1]
 
 //concatenar todos los elementos en 1 string
 
@@ -50,3 +50,28 @@ console.log (alumnos.includes('Gabriela')); //si el elemento existe devuelve un 
 let pos=1
 
 alumnos.splice(pos, 1) //primero se pone la variable pos que nos situa en posición 1, luego separado por coma se pone cuantos elementos se quiere eliminar.
+
+//Reemplazar valores por unos nuevos
+
+alumnos.splice (0,2,'Daniel', 'Juan' );
+
+//Concatenar 2 arrays-- IMPORTANTE! siempre se crea una nueva variable que será la que contiene la concatenación
+
+let comision= alumnas.concat (alumnos)
+
+// Para ordenar de forma alfabética los string de los arrays
+
+alumnos.sort ()
+
+//Para ordenarlos de manera reversa
+
+alumnos.reverse ()
+
+//Extrae una porción del array sobre el que se llama y devuelve un nuevo array.
+let alumnosEspeciales = alumnos.slice(1, 3); //posicion inicial y posicion final
+
+let respuesta=["🥚", "🐔"].sort()
+
+
+
+
