@@ -51,10 +51,10 @@ let resto= number1 % number2;
 --number2;
 
 //Relacionales
-console.log(number1 == number2);
-console.log(number1 >= number2);
-console.log(number1 <= number2);
-console.log(number1 != number2);
+console.log(number1 == number2); //igual
+console.log(number1 >= number2); //mayor
+console.log(number1 <= number2); //menor
+console.log(number1 != number2); //distinto
 
 console.log("Hola mundo");
 

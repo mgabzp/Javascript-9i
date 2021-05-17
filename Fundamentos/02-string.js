@@ -15,7 +15,7 @@ console.log (`Mi nombre es ${nombre} ${apellido}`);
 console.log (nombre.toUpperCase());
 console.log (nombre.toLowerCase());
 console.log (apellido.length);
-console.log (apellido.charAt (4));
+console.log (apellido.charAt (4)); //devuelve un caracter especifico en la posicion indicada.
 console.log (apellido.substr (0,3)); //parametros: (posicion, cantidad de caracteres a mostrar)
 
 console.log (frase.trim ());  //trim sirve para quitar los espacios adelante y atras de la palabra.
