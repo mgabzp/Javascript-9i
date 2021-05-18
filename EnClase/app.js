@@ -28,3 +28,8 @@ alumnos.find (function (alumno){
 let numerosDobles = numeros.map (function(num){
     return num*2
 });
+
+
+carrito.map (function(producto, index){//x ej sirve para un array con elementos. el segundo item es opcional.
+    console.log (`${index+1} - ${producto}`);
+});
