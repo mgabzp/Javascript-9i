@@ -27,7 +27,12 @@ function listaCiudades (){
     document.write (`La primera ciudad es ${ciudades[0]}, la tercera ciudad es ${ciudades[2]} y la última ciudad es ${ciudades[ciudades.length-1]}.`);
 
     document.write (`El elemento que ocupa la segunda posición es ${ciudades[1]}`);
+
+    let sumarParis = ciudades.push ('PARIS');
+    console.log (`Las ciudades son ${ciudades.join ('-')}`);
 }
+
+
 
 
 
