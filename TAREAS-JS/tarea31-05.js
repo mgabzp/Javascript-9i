@@ -12,7 +12,7 @@ class Producto {
     }
 
     imprimeDatos (){
-        document.write (`<br> Su producto es ${this.nombre}, con código ${this.codigo} y su precio es ${this.precio} <br>`);
+        document.write (`<br> Su producto es ${this.nombre}, <br> Su código es ${this.codigo} <br> Su precio es ${this.precio} <br>`);
     }
 }
 
@@ -22,6 +22,7 @@ let producto3 = new Producto (222656, 'Banana', '$15.49');
 
 let productos =[producto1, producto2, producto3];
 
-for (Producto of productos){
-    document.write (Producto.imprimeDatos());
+for (let i= 0; i < productos.length; i++){
+    document.write (productos[i].imprimeDatos());
 }
+
