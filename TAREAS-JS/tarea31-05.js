@@ -12,7 +12,7 @@ class Producto {
     }
 
     imprimeDatos (){
-        document.write (`<br> Su producto es ${this.nombre}, <br> Su código es ${this.codigo} <br> Su precio es ${this.precio} <br>`);
+        document.write (`<br> Su producto es <b>${this.nombre}</b>, <br> Su código es <b>${this.codigo}</b> <br> Su precio es <b>${this.precio}</b> <br>`)
     }
 }
 
