@@ -65,7 +65,7 @@ Escribe un programa que cree un objeto "cuenta" con las siguientes propiedades:
       this.titular = titular;
       this.saldo = saldo;
     }
-  
+    
     ingresar(valor) {
       if (valor <= 0) {
         console.error("Ingresar un valor mayor que 0");
@@ -84,8 +84,8 @@ Escribe un programa que cree un objeto "cuenta" con las siguientes propiedades:
       this.saldo -= valor;
       //this.saldo=this.saldo - valor
     }
-  
-    informar() {
+    
+    informar() { 
       console.log("====Detalle de la cuenta====");
       console.log(`Titular: ${this.titular}`);
       console.log(`Saldo: ${this.saldo}`);

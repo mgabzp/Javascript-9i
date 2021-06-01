@@ -23,6 +23,6 @@ let producto3 = new Producto (222656, 'Banana', '$15.49');
 let productos =[producto1, producto2, producto3];
 
 for (let i= 0; i < productos.length; i++){
-    document.write (productos[i].imprimeDatos());
+    productos[i].imprimeDatos();
 }
 
