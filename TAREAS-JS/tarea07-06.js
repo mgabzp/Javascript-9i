@@ -16,6 +16,8 @@
 
 let agenda = JSON.parse(localStorage.getItem("agenda")) || [];
 
+let espacio = 10 - agenda.lenght;
+
 
 class Contacto {
   constructor(nombre, telefono) {
@@ -36,7 +38,7 @@ function agregarContacto (nombre, telefono) {
 
 function existeContacto (nombre){
     let contactoExistente = agenda.find (function(contacto){
-        return contacto.nombre === nombre;
+        return contacto.nombre.toUpperCase () === nombre.toUpperCase();
 
     });
     if (contactoExistente){
@@ -56,7 +58,7 @@ function listarContactos() {
 
 function buscarContacto (nombre){
     let encontrado = agenda.find (function(numero){
-        return numero.nombre === nombre;
+        return numero.nombre.toUpperCase() === nombre.toUpperCase();
 
     });
     if (encontrado){
@@ -69,7 +71,7 @@ function buscarContacto (nombre){
 
 function eliminarContacto(nombre) {
   let eliminado = agenda.findIndex(function (eliminado) {
-    return eliminado.nombre === nombre;
+    return eliminado.nombre.toUpperCase() === nombre.toUpperCase();
   });
 
   if (eliminado > -1) {
@@ -94,7 +96,9 @@ function agendaLlena (){
 }
 
 function huecosLibres (){
-    let huecos = 10 - [agenda.lenght];
-    
-    console.log (`Aún quedan ${huecos} lugares en la agenda`);
+    if (agenda.lenght < 10) {
+        console.log (`Le quedan ${espacio} lugares en la agenda`);
+    } else {
+        console.warn ('Ya no hay espacio en la agenda');
+    }
 }
