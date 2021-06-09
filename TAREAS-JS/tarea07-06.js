@@ -16,8 +16,6 @@
 
 let agenda = JSON.parse(localStorage.getItem("agenda")) || [];
 
-let espacio = 10 - agenda.lenght;
-
 
 class Contacto {
   constructor(nombre, telefono) {
@@ -27,7 +25,7 @@ class Contacto {
 }
 
 function agregarContacto (nombre, telefono) {
-    if (agenda.lenght < 10){
+    if (agenda.length > 10){
         document.write ('Superó la cantidad de contactos posibles de ingresar.');
     } else {
         agenda.push (new Contacto (nombre, telefono));
@@ -88,7 +86,7 @@ function eliminarContacto(nombre) {
 }
 
 function agendaLlena (){
-    if (agenda.lenght >= 10){
+    if (agenda.length >= 10){
         console.warn ('La agenda está llena');
     } else {
         console.log ('Aún hay lugar en la agenda');
@@ -96,9 +94,7 @@ function agendaLlena (){
 }
 
 function huecosLibres (){
-    if (agenda.lenght < 10) {
+    let espacio = 10 - agenda.length
         console.log (`Le quedan ${espacio} lugares en la agenda`);
-    } else {
-        console.warn ('Ya no hay espacio en la agenda');
-    }
+
 }
