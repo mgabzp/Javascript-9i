@@ -24,3 +24,24 @@ function listarAlumnos (array, contenedor){
 }
 
 listarAlumnos (alumnos, tarjeta);
+
+function intercalarNombre (lista){
+    let newList = lista.map (function (item){
+        let espacio = item.indexOf (" ");
+        let nombre = item.slice (0, espacio);
+        let apellido = item.slice (espacio +1, item.length);
+        
+        return `$(apellido) $(nombre)`;
+    });
+    return newList;
+}
+
+listarAlumnos (alumnos, tarjeta);
+
+function ordenarLista (){ //TERMINAR DE COPIAR!!
+
+
+
+
+
+}
