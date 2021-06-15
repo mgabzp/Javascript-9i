@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="shortcut icon"
+      href="https://icons-for-free.com/iconfiles/png/512/hero+marvel+character+super+hero+icon-1320166754459520952.png"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/TAREAS-JS/WEB HÉROES/css/style.css" />
+    <title>Heroes Web</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand font-weight-bold" href="#"></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="btn btn-light nav-link fw-bold"
+                  aria-current="page"
+                  href="#"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="btn btn-warning nav-link active fw-bold"
+                  href="./cargar.html"
+                  >Create your Superheroe</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-danger nav-link fw-bold" href="./tabla.html"
+                  >My heroes</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="Tittle">
+        <div class="container mt-0">
+          <div class="row">
+            <div class="col-6 mt-1">
+              <h1>LETS CREATE YOUR HEROE!!!</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <form>
+        <div class="container">
+          <div class="row">
+            <div class="col-4 my-md-4">
+              <div class="form-group">
+                <label for="name">
+                  <span>Hero's Name:</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="name"
+                    id="name"
+                    placeholder="Hero's name"
+                    required
+                    autocomplete="name"
+                  />
+                </label>
+              </div>
+              <br />
+              <div class="form-group">
+                <label for="alias">
+                  <span>Superhero's alias:</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="alias"
+                    id="alias"
+                    placeholder="alias"
+                    required
+                  />
+                </label>
+              </div>
+              <br />
+              <div class="form-group">
+                <label for="superpower">
+                  <span>Superpower:</span>
+                  <textarea
+                    name="superpower"
+                    class="form-control"
+                    id="superpower"
+                    cols="30"
+                    rows="1"
+                    placeholder="superpower"
+                    required
+                  ></textarea>
+                </label>
+              </div>
+              <br />
+              <div class="form-group">
+                <label for="team">
+                  <span>Team:</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="team"
+                    id="team"
+                    placeholder="team"
+                    required
+                  />
+                </label>
+              </div>
+              <br />
+              <div class="form-group">
+                <label for="image">
+                  <span>Image URL:</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="image"
+                    id="imageUrl"
+                    placeholder="Insert your image URL"
+                    required
+                  />
+                </label>
+              </div>
+              <br />
+              <button
+                class="btn btn-success"
+                type="submit"
+                id="sendHero"
+                onclick="addHero()"
+              >
+                Submit Hero
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+
+    <script src="/TAREAS-JS/WEB HÉROES/js/load.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
