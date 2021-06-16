@@ -13,3 +13,11 @@ input, textarea {
     height: 30px;
     font-size: 1rem;
 }
+
+tr {
+    text-align:start !important;
+}
+
+td {
+    text-align: start !important;
+}

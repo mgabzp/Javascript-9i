@@ -1,5 +1,5 @@
 let agenda =JSON.parse (localStorage.getItem ('agenda')) || []
-let memo = 10
+let memo = 10 - agenda.length;
 
 class Contacto {
     constructor(nombre, telefono){
@@ -9,6 +9,12 @@ class Contacto {
 }
 
 //Agregar contactos a la agenda
+
+function contarRegistro (array){
+    let total = JSON.parse (localStorage.getItem("agenda"));
+    // console.log (array.length);
+    document.querySelector ("#count").innerText = array.length + " de " + total.length;
+}
 
 function addContact(){
     let nombre = document.querySelector ("#nombreText");
@@ -27,7 +33,7 @@ function addContact(){
             if (memo>0){
                 agenda.push (new Contacto(nombre.value.toUpperCase(), telefono.value));
                 localStorage.setItem ('agenda', JSON.stringify(agenda));
-                memo -= 1;
+                memo -= 1; // memo = memo -1
             } else{
                 alert ("Memoria llena");
             }
@@ -50,11 +56,12 @@ function verifyContact (nombre){
 
 function updateAgenda(){
     document.querySelector ("#nombreText").value = "";
-    
+    // document.querySelector ("#nombreText").focus() = "";
     document.querySelector ("#telefText").value = "";
-    document.querySelector ("#nombreText").focus() = "";
+    
     agenda = JSON.parse (localStorage.getItem ("agenda"));
 
+    contarRegistro (agenda);
     cargarTabla (agenda);
 
 }
@@ -68,6 +75,7 @@ function cargarTabla (array){
         let datos = `
         <td> ${elemento.nombre} </td>
         <td> ${elemento.telefono} </td>
+        <td> <button class = "btn btn-sm btn-danger" onclick="delContact(${index})">X</button></td>
         `
 
         fila.innerHTML= datos; //el tipo de elemento creado determina si es innerHTML (etiquetas, elemento contenedor) o innerText (x ej 'p', 'span')
@@ -77,4 +85,43 @@ function cargarTabla (array){
     });
 }
 
+function filterTabla (){
+let texto = document.querySelector ("#textBuscar")
+agenda =JSON.parse (localStorage.getItem ('agenda'));
+
+agenda= agenda.filter (function(contacto){
+    return contacto.nombre.indexOf (texto.value.toUpperCase()) > -1;
+
+});
+
+texto.value = "";
+texto.focus ();
+
+contarRegistro (agenda);
+cargarTabla (agenda);
+}
+
+function delContact (id){
+    // console.log (id);
+    let agendaTotal = JSON.parse (localStorage.getItem ("agenda"));
+
+    let index = agendaTotal.findIndex (function(contacto){
+        return contacto.nombre === agenda[id].nombre;
+    });
+
+    console.log (index);
+
+    let validar = confirm ("¿Está seguro que quiere borrar el contacto?");
+
+    if (validar){
+        agendaTotal.splice(index, 1);
+        localStorage.setItem("agenda", JSON.stringify(agendaTotal));
+        memo +=1;
+        updateAgenda();
+    }
+
+}
+
+
+contarRegistro (agenda);
 cargarTabla (agenda);
