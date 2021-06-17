@@ -116,7 +116,7 @@ function delContact (id){
     if (validar){
         agendaTotal.splice(index, 1);
         localStorage.setItem("agenda", JSON.stringify(agendaTotal));
-        memo +=1;
+        // memo +=1;
         updateAgenda();
     }
 
